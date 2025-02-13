@@ -1,2 +1,2 @@
 # Projeto-Junior
-Aprimorando a minha habilidade com front-end
+Aprofundando meus conhecimentos e habilidades no desenvolvimento front-end.
