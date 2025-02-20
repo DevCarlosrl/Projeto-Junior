@@ -1,7 +1,7 @@
-main{
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(162, 162, 162);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .menu{
@@ -35,8 +35,9 @@ main{
 }
 
 .menu .navbar ul li a{
-    color: #000;
+    color: #555;
     font-size: 12px;
+    transition: color 0.3s;
 }
 
 .menu .navbar ul li a::after{
@@ -52,6 +53,7 @@ main{
 
 
 .menu .navbar ul li a:hover{
+    color: #5726c2;
     opacity: 0.9;
 }
 
@@ -125,3 +127,142 @@ main{
 .show {
     display: block !important;
 }
+
+.submenu{
+    width: 100%;
+}
+
+.submenu ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.submenu ul li{
+    list-style: none;
+}
+
+.submenu ul li a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.submenu ul li a i{
+    font-size: 20px; /* Tamanho do ícone */
+    margin-bottom: 5px;
+}
+
+.submenu ul li a:hover, .submenu ul li a.active {
+    color: #5726c2; /* Cor quando ativo ou hover */
+}
+
+.submenu ul li a.active {
+    font-weight: bold;
+    position: relative;
+}
+
+.submenu ul li a.active::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #5726c2;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+}
+
+main{
+    height: 40vh;
+    width: 100%;
+    background-color: #AA8CEB;
+}
+
+.recipient h2{
+    margin: 25px 25px;
+    color: #555;
+}
+
+.recipient__content {
+    display: flex;
+    overflow-x: auto; /* Adiciona a barra de rolagem horizontal */
+    scroll-behavior: smooth; /* Suaviza o scroll */
+    white-space: nowrap; /* Impede quebra de linha */
+    cursor: grab; /* Mostra a mãozinha quando passa o mouse */
+}
+
+.recipient__content::-webkit-scrollbar{
+    overflow: hidden;
+}
+
+.recipient__content:active {
+    cursor: grabbing; /* Muda o cursor enquanto arrasta */
+}
+
+
+.recipient__content .content__cards{
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    width: 300px;
+    margin: 10px 20px;
+    scroll-snap-align: start;
+    flex: 0 0 auto; /* Evita que os cards quebrem a linha */
+}
+
+
+.recipient__content .content__cards img{
+    background-size: cover;
+    margin: none;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px ;
+    height: 50%;
+}
+
+.recipient__content .content__cards .type__{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+
+
+.recipient__content .content__cards span, h3{
+    color: #555; 
+    margin: 0px 16px;
+}
+
+
+.recipient__content .content__cards span{
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.474);
+}
+
+.recipient__content .content__cards .type{
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.734);
+}
+
+
+.recipient__content .content__cards .price{
+    margin-bottom: 20px;
+}
+
+.recipient__content .content__cards .price h3{
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.734);
+}
+
+
+
+
