@@ -59,7 +59,7 @@
 
 .menu .navbar button{
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid #dbdbdb;
     border-radius: 100px;
     box-shadow: 0 4px 8px rgba(84, 89, 98, .15);
     margin: 6px 12px;
@@ -190,28 +190,19 @@ main{
 
 .recipient__content {
     display: flex;
-    overflow-x: auto; /* Adiciona a barra de rolagem horizontal */
-    scroll-behavior: smooth; /* Suaviza o scroll */
     white-space: nowrap; /* Impede quebra de linha */
-    cursor: grab; /* Mostra a mãozinha quando passa o mouse */
 }
-
-.recipient__content::-webkit-scrollbar{
-    overflow: hidden;
-}
-
-.recipient__content:active {
-    cursor: grabbing; /* Muda o cursor enquanto arrasta */
-}
-
 
 .recipient__content .content__cards{
     border: 1px solid #ebebeb;
     border-radius: 10px;
     width: 300px;
     margin: 10px 20px;
-    scroll-snap-align: start;
-    flex: 0 0 auto; /* Evita que os cards quebrem a linha */
+    transition: ease 0.3s;
+}
+
+.recipient__content .content__cards:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 
